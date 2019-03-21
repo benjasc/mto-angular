@@ -83,7 +83,7 @@ import { ValidadorDatos } from './modulos/gde/util/validador.util';
 import { ReimpresionGuiasGdeComponent } from './modulos/gde/components/reimpresionGuiasDespacho/reimpresionGuiasDespacho.component';
 import { GuiasTransferenciaComponent } from './modulos/gde/components/guiasTransferencia/guiasTransferencia.component';
 import { GuiaTransferenciaDetalleComponent } from './modulos/gde/components/guiasTransferencia/guiaTransferenciaDetalle/guiaTransferenciaDetalle.component';
-
+import { CuadraturaBigTicketComponent } from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
 
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
@@ -141,7 +141,8 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     ModalDetalleMasivoComponent,
     ReimpresionGuiasGdeComponent,
     GuiasTransferenciaComponent,
-    GuiaTransferenciaDetalleComponent
+    GuiaTransferenciaDetalleComponent,
+    CuadraturaBigTicketComponent
 
   ],
   imports: [

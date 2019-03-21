@@ -26,10 +26,11 @@ import { ModalDetalleMasivoComponent } from './modulos/gde/components/emisionMas
 import { ReimpresionGuiasGdeComponent } from './modulos/gde/components/reimpresionGuiasDespacho/reimpresionGuiasDespacho.component';
 import { GuiasTransferenciaComponent } from './modulos/gde/components/guiasTransferencia/guiasTransferencia.component';
 import { GuiaTransferenciaDetalleComponent } from './modulos/gde/components/guiasTransferencia/guiaTransferenciaDetalle/guiaTransferenciaDetalle.component';
-
+import {CuadraturaBigTicketComponent} from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'cuadraturaBT', component: CuadraturaBigTicketComponent},
   { path: 'welcome', component: WelcomeComponent},
   { path: 'search', component: SearchComponent },
   { path: 'order/:ordernumber', component: OrderComponent },
