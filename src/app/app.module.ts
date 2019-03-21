@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './modulos/shared/components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './modulos/ordenes/components/dashboard/dashboard.component';
-import { LoginComponent } from './modulos/shared/components/login/login.component';
+//import { LoginComponent } from './modulos/shared/components/login/login.component';
 import { MyDatePickerModule } from 'mydatepicker';
 import { ChartsModule } from 'ng2-charts';
 import { MenuComponent } from './modulos/shared/components/menu/menu.component';
@@ -83,6 +83,9 @@ import { ValidadorDatos } from './modulos/gde/util/validador.util';
 import { ReimpresionGuiasGdeComponent } from './modulos/gde/components/reimpresionGuiasDespacho/reimpresionGuiasDespacho.component';
 import { GuiasTransferenciaComponent } from './modulos/gde/components/guiasTransferencia/guiasTransferencia.component';
 import { GuiaTransferenciaDetalleComponent } from './modulos/gde/components/guiasTransferencia/guiaTransferenciaDetalle/guiaTransferenciaDetalle.component';
+import { LoginComponent } from './modulos/sgo/components/login/login.component';
+import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
+
 
 
 
@@ -141,7 +144,8 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     ModalDetalleMasivoComponent,
     ReimpresionGuiasGdeComponent,
     GuiasTransferenciaComponent,
-    GuiaTransferenciaDetalleComponent
+    GuiaTransferenciaDetalleComponent,
+    AdministracionUsuariosComponent
 
   ],
   imports: [
