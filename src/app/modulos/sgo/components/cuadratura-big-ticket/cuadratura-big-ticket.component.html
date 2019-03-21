@@ -1,64 +1,98 @@
-<app-main-navbar></app-main-navbar>
 <div class=" color ">
-    <section class="container is-fluid ">
+    <div class="container is-fluid ">
         <div class="columns">
             <div class="column is-12">
                 <div class="card">
-                    <p class="card-header-title">Ingrese Parámetros</p>
-                    <div class="columns">
-                        <div class="column">
-                            <div class="field ">
-                                <label class="label is-small ">Fecha Venta:</label>
-                                <div class="control is-disabled ">
-                                    <my-date-picker [(ngModel)]="fecha" (dateChanged)="action()"></my-date-picker>
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Consulta de Cuadratura BigTicket - BackOffice
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p class="card-header-title">Ingrese Parámetros</p>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="field ">
+                                        <label class="label is-small ">Fecha Venta:</label>
+                                        <div class="control is-disabled ">
+                                            <my-date-picker [(ngModel)]="fecha" (dateChanged)="action()"></my-date-picker>
+                                        </div>
+                                        <!--<app-email></app-email>-->
+                                    </div>
                                 </div>
-                                <!--<app-email></app-email>-->
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="field ">
-                                <label class="label is-small ">Sucursal Venta:</label>
-                                <div class="select">
-                                    <select>
-                                      <option>(Todos)</option>
-                                      <option>With options</option>
-                                    </select>
+                                <div class="column">
+                                    <div class="field ">
+                                        <label class="label is-small ">Sucursal Venta:</label>
+                                        <div class="select is-disabled">
+                                            <select>
+                                          <option>(Todos)</option>
+                                          <option>With options</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="field ">
+                                        <a class="button is-large">
+                                            <span>Ejecutar Consulta</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column">
-                            <div class="field ">
-                                <a class="button is-large">
-                                    <span class="icon is-medium">
-                                        <i class="fas fa-caret-right"></i>
-                                    </span>
-                                    <span>Ejecutar Consulta</span>
-                                </a>
+                            <div class="card">
+                                <div class="card-content">
+                                    <p class="title">
+                                        Resultados de la búsqueda
+                                    </p>
+                                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Orden de Compra</th>
+                                                <th>Modelo despacho</th>
+                                                <th>Estado del CUD</th>
+                                                <th>Motivo de CUD</th>
+                                                <th>Orden de Compra</th>
+                                                <th>Modelo despacho</th>
+                                                <th>Estado del CUD</th>
+                                                <th>Motivo de CUD</th>
+                                                <th>Orden de Compra</th>
+                                                <th>Modelo despacho</th>
+
+
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>12</td>
+                                                <td>12</td>
+                                                <td>11</td>
+
+
+                                            </tr>
+
+                                        </tbody>
+                                        <!-- <a *ngIf='emailInfo.results.length > 0' class="button is-small is-success" >Exportar</a> -->
+                                    </table>
+                                </div>
                             </div>
+                            <br/>
+                            <br/>
+                            <button class="button is-success " (click)="imprimirGde()">Cerrar </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="container is-fluid ">
-        <div class="columns">
-            <div class="column is-12">
-                <div class="card">
-                    <table datatable>
-                        <thead>
-                            <tr>
-                                <td>Hola</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Chao</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 </div>
