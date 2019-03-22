@@ -1,6 +1,6 @@
 import { OrderComponent } from './modulos/shared/components/order/order.component';
 import { DashboardComponent } from './modulos/ordenes/components/dashboard/dashboard.component';
-import { LoginComponent } from './modulos/shared/components/login/login.component';
+//import { LoginComponent } from './modulos/shared/components/login/login.component';
 import { SearchComponent } from './modulos/ordenes/components/search/search.component';
 import { BackOfficeComponent } from './back-office/back-office.component';
 import { NgModule } from '@angular/core';
@@ -26,9 +26,18 @@ import { ModalDetalleMasivoComponent } from './modulos/gde/components/emisionMas
 import { ReimpresionGuiasGdeComponent } from './modulos/gde/components/reimpresionGuiasDespacho/reimpresionGuiasDespacho.component';
 import { GuiasTransferenciaComponent } from './modulos/gde/components/guiasTransferencia/guiasTransferencia.component';
 import { GuiaTransferenciaDetalleComponent } from './modulos/gde/components/guiasTransferencia/guiaTransferenciaDetalle/guiaTransferenciaDetalle.component';
+<<<<<<< HEAD
+import { LoginComponent } from './modulos/sgo/components/login/login.component';
+import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
+
+
+=======
 import {CuadraturaBigTicketComponent} from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
+>>>>>>> 002cc09e3a70ad335d3e482ac9c1ca5047005fe2
 
 const routes: Routes = [
+  { path: 'administracion', component: AdministracionUsuariosComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cuadraturaBT', component: CuadraturaBigTicketComponent},
   { path: 'welcome', component: WelcomeComponent},
@@ -48,7 +57,6 @@ const routes: Routes = [
   { path: 'maintainer-profile', component: MaintainerProfileComponent },
   { path: 'bitacora', component: BitacoraComponent },
   { path: 'maintainer-parameter', component: MantenedorParametrosComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'gde', component: EmisionUnitariaGdeComponent },
   { path: 'gdeMasiva', component: EmisionMasivaGdeComponent },
   { path: 'gdeMasiva/detalle', component: ModalDetalleMasivoComponent},
