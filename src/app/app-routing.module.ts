@@ -30,9 +30,15 @@ import { LoginComponent } from './modulos/sgo/components/login/login.component';
 import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
 import {CuadraturaBigTicketComponent} from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
 import {DespachoBatchNumberComponent} from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
+import {DespachoNumeroCartonComponent} from './modulos/sgo/components/despacho-numero-carton/despacho-numero-carton.component';
+import {LpnbatchNumberComponent} from './modulos/sgo/components/lpnbatch-number/lpnbatch-number.component';
+import { TransferenciaSucursalComponent } from './modulos/sgo/components/transferencia-sucursal/transferencia-sucursal.component';
 
 
 const routes: Routes = [
+  { path: 'transferenciaSucursal' , component: TransferenciaSucursalComponent},
+  { path: 'lpnBatchNumber' , component: LpnbatchNumberComponent},
+  { path: 'despachoNumCarton' , component: DespachoNumeroCartonComponent},
   { path: 'despachoBatchNumber', component: DespachoBatchNumberComponent },
   { path: 'administracion', component: AdministracionUsuariosComponent },
   { path: 'login', component: LoginComponent },

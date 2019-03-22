@@ -92,7 +92,12 @@ import { CuadraturaBigTicketComponent } from './modulos/sgo/components/cuadratur
 import { DespachoBatchNumberComponent } from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
 import { CuadraturaService } from './modulos/sgo/services/cuadratura.services';
 import { DespachoBatchNumberService } from './modulos/sgo/services/despachoBN.services';
-
+import { DespachoNumCartonService } from './modulos/sgo/services/despachoNumCarton.services';
+import { DespachoNumeroCartonComponent } from './modulos/sgo/components/despacho-numero-carton/despacho-numero-carton.component';
+import { LpnbatchNumberComponent } from './modulos/sgo/components/lpnbatch-number/lpnbatch-number.component';
+import { LpnBatchNumberService } from './modulos/sgo/services/lpnBatchNumber.services.';
+import { TransferenciaSucursalComponent } from './modulos/sgo/components/transferencia-sucursal/transferencia-sucursal.component';
+import { TransferenciaSucursalService } from './modulos/sgo/services/transferenciaSucursal.services';
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
 
@@ -152,7 +157,10 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     GuiaTransferenciaDetalleComponent,
     AdministracionUsuariosComponent,
     CuadraturaBigTicketComponent,
-    DespachoBatchNumberComponent
+    DespachoBatchNumberComponent,
+    DespachoNumeroCartonComponent,
+    LpnbatchNumberComponent,
+    TransferenciaSucursalComponent
 
 
   ],
@@ -200,6 +208,9 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     TableConfigEmisionGDE,
     CuadraturaService,
     DespachoBatchNumberService,
+    DespachoNumCartonService,
+    LpnBatchNumberService,
+    TransferenciaSucursalService,
     ValidadorDatos,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'es-CL' }
