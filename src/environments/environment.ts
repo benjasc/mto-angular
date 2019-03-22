@@ -11,6 +11,7 @@ export const environment = {
   url_api: 'http://localhost:8080/CencosudBOServices',
 
   url_oc_history: 'https://8894hwz3t1.execute-api.us-west-2.amazonaws.com/dev',
-  url_reinject_order: 'https://01x6uja1p6.execute-api.us-west-2.amazonaws.com/dev'
+  url_reinject_order: 'https://01x6uja1p6.execute-api.us-west-2.amazonaws.com/dev',
+  test_api : 'http://localhost:3004'
 
 };

@@ -9,5 +9,6 @@ export const environment = {
   url: 'https://www.mtd-cenco.com',
   url_api: 'https://www.mtd-cenco.com/CencosudBOServices',
   url_oc_history: 'https://8894hwz3t1.execute-api.us-west-2.amazonaws.com/prod',
-  url_reinject_order: 'https://01x6uja1p6.execute-api.us-west-2.amazonaws.com/prod'
-};
+  url_reinject_order: 'https://01x6uja1p6.execute-api.us-west-2.amazonaws.com/prod',
+  test_api : 'http://localhost:3004'
+

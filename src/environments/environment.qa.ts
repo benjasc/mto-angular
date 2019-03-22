@@ -9,5 +9,7 @@ export const environment = {
   url: 'https://ec2-35-162-133-235.us-west-2.compute.amazonaws.com',
   url_api: 'https://ec2-35-162-133-235.us-west-2.compute.amazonaws.com/CencosudBOServices',
   url_oc_history: 'https://8894hwz3t1.execute-api.us-west-2.amazonaws.com/qa',
-  url_reinject_order: 'https://01x6uja1p6.execute-api.us-west-2.amazonaws.com/qa'
+  url_reinject_order: 'https://01x6uja1p6.execute-api.us-west-2.amazonaws.com/qa',
+  test_api : 'http://localhost:3004'
+
 };
