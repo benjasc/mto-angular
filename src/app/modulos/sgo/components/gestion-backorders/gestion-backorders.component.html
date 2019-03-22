@@ -1,7 +1,7 @@
 <section class="container is-fluid ">
     <div class="card ">
         <div class="card-header ">
-            <div class="card-header-title">Administracion de Usuarios</div>
+            <div class="card-header-title">Gestion Backorders</div>
         </div>
         <div class="card-content ">
             <div class="content">
@@ -57,13 +57,10 @@
                             </thead>
 
                             <tbody>
-                                <tr *ngFor="let gde of arrayGuiaDespacho">
-                                    <td>lo que sea</td>
-                                    <td>sdfsdf</td>
-                                    <td>sdfsdf</td>
-                                    <td>
-                                        <a class="button is-small is-success" (click)='buscarTransporte()'>Transporte</a>
-                                    </td>
+                                <tr *ngFor="let x of arrayBackorders">
+                                    <td>{{x.idpermiso}}</td>
+                                    <td>{{x.accion}}</td>
+                                    <td>{{x.acceso}}</td>
                                 </tr>
 
                             </tbody>
@@ -75,7 +72,7 @@
                 </div>
                 <br><br>
                 <a class="button is-danger">Cancelar</a>
-                <a class="button is-link">Guardar</a>
+                <button class="button is-link" (click)="usuarios()">Guardar</button>
 
             </div>
 

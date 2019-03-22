@@ -76,6 +76,7 @@ import { EmisionUnitariaGdeComponent } from './modulos/gde/components/emisionUni
 import { fromPromise } from 'rxjs/observable/fromPromise';
 import { DataTablesModule } from 'angular-datatables';
 import { TableConfigEmisionGDE } from './modulos/gde/util/tableConfig.util';
+import { TableConfigSgo } from './modulos/sgo/components/util/tableConfigSgo.util';
 import { ModalConfigTransporteComponent } from './modulos/gde/services/configTransporteModal/configTransporte.component';
 import { EmisionMasivaGdeComponent } from './modulos/gde/components/emisionMasivaGde/emisionMasivaGde.component';
 import { ModalDetalleMasivoComponent } from './modulos/gde/components/emisionMasivaGde/emisionMasivaGdeModal/detalleEmisionMasivaGde.component';
@@ -83,10 +84,14 @@ import { ValidadorDatos } from './modulos/gde/util/validador.util';
 import { ReimpresionGuiasGdeComponent } from './modulos/gde/components/reimpresionGuiasDespacho/reimpresionGuiasDespacho.component';
 import { GuiasTransferenciaComponent } from './modulos/gde/components/guiasTransferencia/guiasTransferencia.component';
 import { GuiaTransferenciaDetalleComponent } from './modulos/gde/components/guiasTransferencia/guiaTransferenciaDetalle/guiaTransferenciaDetalle.component';
-import { LoginComponent } from './modulos/sgo/components/login/login.component';
-import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
 import { CuadraturaBigTicketComponent } from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
 import { GestionBackordersComponent } from './modulos/sgo/components/gestion-backorders/gestion-backorders.component';
+import { LoginComponent } from './modulos/sgo/components/login/login.component';
+import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
+import { DespachoBatchNumberComponent } from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
+import { CuadraturaService } from './modulos/sgo/services/cuadratura.services';
+import { DespachoBatchNumberService } from './modulos/sgo/services/despachoBN.services';
+import { GestionBackordersService } from './modulos/sgo/services/gestion-backorders.service';
 
 
 
@@ -148,7 +153,9 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     GuiaTransferenciaDetalleComponent,
     AdministracionUsuariosComponent,
     CuadraturaBigTicketComponent,
-    GestionBackordersComponent
+    GestionBackordersComponent,
+    DespachoBatchNumberComponent
+
 
   ],
   imports: [
@@ -193,7 +200,11 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     MaintainerParameterService,
     OrderTypeService,
     TableConfigEmisionGDE,
+    TableConfigSgo,
+    CuadraturaService,
+    DespachoBatchNumberService,
     ValidadorDatos,
+    GestionBackordersService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'es-CL' }
   ],

@@ -5,7 +5,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title">
-                            Consulta de Cuadratura BigTicket - BackOffice
+                            Consulta de Despachos por BatchNumber
                         </p>
                     </header>
                     <div class="card-content">
@@ -14,22 +14,11 @@
                             <div class="columns">
                                 <div class="column">
                                     <div class="field ">
-                                        <label class="label is-small ">Fecha Venta:</label>
-                                        <div class="control is-disabled ">
-                                            <my-date-picker [(ngModel)]="fecha" (dateChanged)="action()"></my-date-picker>
+                                        <label class="label is-small ">Número de BatchNumber:</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="Text input">
                                         </div>
                                         <!--<app-email></app-email>-->
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="field ">
-                                        <label class="label is-small ">Sucursal Venta:</label>
-                                        <div class="select is-disabled">
-                                            <select>
-                                          <option>(Todos)</option>
-                                          <option>With options</option>
-                                        </select>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="column">
@@ -49,31 +38,28 @@
 
                                         <thead>
                                             <tr>
-                                                <th>Orden de Compra</th>
-                                                <th>Modelo despacho</th>
-                                                <th>Estado del CUD</th>
-                                                <th>Motivo de CUD</th>
-                                                <th>Orden de Compra</th>
-                                                <th>Modelo despacho</th>
-                                                <th>Estado del CUD</th>
-                                                <th>Motivo de CUD</th>
-                                                <th>Orden de Compra</th>
-                                                <th>Modelo despacho</th>
-                                                <th>Estado del CUD</th>
-                                                <th>Motivo de CUD</th>
-                                                <th>Orden de Compra</th>
-                                                <th>Modelo despacho</th>
-                                                <th>Estado del CUD</th>
-                                                <th>Motivo de CUD</th>
-                                                <th>Orden de Compra</th>
-                                                <th>Modelo despacho</th>
-                                                <th>Estado del CUD</th>
-                                                <th>Motivo de CUD</th>
+                                                <th> </th>
+                                                <th>Sector</th>
+                                                <th>Camión Virtual</th>
+                                                <th>Boleta</th>
+                                                <th>Fecha Venta</th>
+                                                <th>Fecha Despacho</th>
+                                                <th>Fecha Compromiso</th>
+                                                <th>Flecha Planificación</th>
+                                                <th>Fecha Fachada</th>
+                                                <th>Suc. Venta</th>
+                                                <th>Suc. Stock</th>
+                                                <th>Suc. Despacho</th>
+                                                <th>Estado</th>
+                                                <th>Datos Cliente</th>
+                                                <th>Número de OC</th>
+                                                <th>SKU</th>
+                                                <th>Descripción SKU</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
-                                            <tr *ngFor="let cuadratura of arrayCuadratura">
+                                            <tr *ngFor="let cuadratura of arrayDespachoBN">
                                                 <td>{{cuadratura.odencompra}}</td>
                                                 <td>{{cuadratura.modeloDespacho}}</td>
                                                 <td>{{cuadratura.estadoCud}}</td>
@@ -91,9 +77,6 @@
                                                 <td>{{cuadratura.estadoCud}}</td>
                                                 <td>{{cuadratura.motivo}}</td>
                                                 <td>{{cuadratura.odencompra}}</td>
-                                                <td>{{cuadratura.modeloDespacho}}</td>
-                                                <td>{{cuadratura.estadoCud}}</td>
-                                                <td>{{cuadratura.motivo}}</td>
                                             </tr>
 
                                         </tbody>

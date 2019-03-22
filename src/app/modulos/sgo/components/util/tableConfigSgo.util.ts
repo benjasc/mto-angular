@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { EmisionUnitariaModel } from '../model/emisionUnitariaGde.model';
 
 @Injectable()
-export class TableConfigEmisionGDE {
+export class TableConfigSgo {
   dtOptionsExport: any = {
     language: {
       emptyTable: 'Ningún dato disponible en esta tabla',
@@ -32,9 +31,9 @@ export class TableConfigEmisionGDE {
     pagingType: 'full_numbers',
     pageLength: 3,
     dom: 'Bfrtip',
-    buttons: ['csv', 'excel','copy','print'],
+    buttons: [],
     responsive: false,
-    scrollX: true
+    scrollX: false
   };
 
   dtOptionsWithinScrollX: any = {
