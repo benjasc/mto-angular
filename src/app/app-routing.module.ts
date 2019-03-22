@@ -30,12 +30,24 @@ import { LoginComponent } from './modulos/sgo/components/login/login.component';
 import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
 import {CuadraturaBigTicketComponent} from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
 import {DespachoBatchNumberComponent} from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
+<<<<<<< HEAD
 import { GestionBackordersComponent } from './modulos/sgo/components/gestion-backorders/gestion-backorders.component';
 
 
 const routes: Routes = [
   { path: 'gestion-backorders', component: GestionBackordersComponent },
   { path: 'administracion-usuarios', component: AdministracionUsuariosComponent },
+=======
+import {DespachoNumeroCartonComponent} from './modulos/sgo/components/despacho-numero-carton/despacho-numero-carton.component';
+import {LpnbatchNumberComponent} from './modulos/sgo/components/lpnbatch-number/lpnbatch-number.component';
+import { TransferenciaSucursalComponent } from './modulos/sgo/components/transferencia-sucursal/transferencia-sucursal.component';
+
+
+const routes: Routes = [
+  { path: 'transferenciaSucursal' , component: TransferenciaSucursalComponent},
+  { path: 'lpnBatchNumber' , component: LpnbatchNumberComponent},
+  { path: 'despachoNumCarton' , component: DespachoNumeroCartonComponent},
+>>>>>>> 185691a84fc49b2bd4c574f8c24f3857663b3b6f
   { path: 'despachoBatchNumber', component: DespachoBatchNumberComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
