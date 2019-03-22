@@ -30,9 +30,9 @@ export class TableConfigEmisionGDE {
     },
     destroy: true,
     pagingType: 'full_numbers',
-    pageLength: 10,
+    pageLength: 3,
     dom: 'Bfrtip',
-    buttons: ['csv', 'excel'],
+    buttons: ['csv', 'excel','copy','print'],
     responsive: false,
     scrollX: true
   };

@@ -83,14 +83,15 @@ import { ValidadorDatos } from './modulos/gde/util/validador.util';
 import { ReimpresionGuiasGdeComponent } from './modulos/gde/components/reimpresionGuiasDespacho/reimpresionGuiasDespacho.component';
 import { GuiasTransferenciaComponent } from './modulos/gde/components/guiasTransferencia/guiasTransferencia.component';
 import { GuiaTransferenciaDetalleComponent } from './modulos/gde/components/guiasTransferencia/guiaTransferenciaDetalle/guiaTransferenciaDetalle.component';
-<<<<<<< HEAD
+
 import { LoginComponent } from './modulos/sgo/components/login/login.component';
 import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
 
 
-=======
 import { CuadraturaBigTicketComponent } from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
->>>>>>> 002cc09e3a70ad335d3e482ac9c1ca5047005fe2
+import { DespachoBatchNumberComponent } from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
+import { CuadraturaService } from './modulos/sgo/services/cuadratura.services';
+import { DespachoBatchNumberService } from './modulos/sgo/services/despachoBN.services';
 
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
@@ -149,11 +150,10 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     ReimpresionGuiasGdeComponent,
     GuiasTransferenciaComponent,
     GuiaTransferenciaDetalleComponent,
-<<<<<<< HEAD
-    AdministracionUsuariosComponent
-=======
-    CuadraturaBigTicketComponent
->>>>>>> 002cc09e3a70ad335d3e482ac9c1ca5047005fe2
+    AdministracionUsuariosComponent,
+    CuadraturaBigTicketComponent,
+    DespachoBatchNumberComponent
+
 
   ],
   imports: [
@@ -198,6 +198,8 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     MaintainerParameterService,
     OrderTypeService,
     TableConfigEmisionGDE,
+    CuadraturaService,
+    DespachoBatchNumberService,
     ValidadorDatos,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'es-CL' }

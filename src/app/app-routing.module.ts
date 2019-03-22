@@ -26,16 +26,14 @@ import { ModalDetalleMasivoComponent } from './modulos/gde/components/emisionMas
 import { ReimpresionGuiasGdeComponent } from './modulos/gde/components/reimpresionGuiasDespacho/reimpresionGuiasDespacho.component';
 import { GuiasTransferenciaComponent } from './modulos/gde/components/guiasTransferencia/guiasTransferencia.component';
 import { GuiaTransferenciaDetalleComponent } from './modulos/gde/components/guiasTransferencia/guiaTransferenciaDetalle/guiaTransferenciaDetalle.component';
-<<<<<<< HEAD
 import { LoginComponent } from './modulos/sgo/components/login/login.component';
 import { AdministracionUsuariosComponent } from './modulos/sgo/components/administracion-usuarios/administracion-usuarios.component';
-
-
-=======
 import {CuadraturaBigTicketComponent} from './modulos/sgo/components/cuadratura-big-ticket/cuadratura-big-ticket.component';
->>>>>>> 002cc09e3a70ad335d3e482ac9c1ca5047005fe2
+import {DespachoBatchNumberComponent} from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
+
 
 const routes: Routes = [
+  { path: 'despachoBatchNumber', component: DespachoBatchNumberComponent },
   { path: 'administracion', component: AdministracionUsuariosComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
