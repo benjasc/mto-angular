@@ -91,18 +91,16 @@ import { AdministracionUsuariosComponent } from './modulos/sgo/components/admini
 import { DespachoBatchNumberComponent } from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
 import { CuadraturaService } from './modulos/sgo/services/cuadratura.services';
 import { DespachoBatchNumberService } from './modulos/sgo/services/despachoBN.services';
-<<<<<<< HEAD
 import { GestionBackordersService } from './modulos/sgo/services/gestion-backorders.service';
-
-
-=======
 import { DespachoNumCartonService } from './modulos/sgo/services/despachoNumCarton.services';
 import { DespachoNumeroCartonComponent } from './modulos/sgo/components/despacho-numero-carton/despacho-numero-carton.component';
 import { LpnbatchNumberComponent } from './modulos/sgo/components/lpnbatch-number/lpnbatch-number.component';
 import { LpnBatchNumberService } from './modulos/sgo/services/lpnBatchNumber.services.';
 import { TransferenciaSucursalComponent } from './modulos/sgo/components/transferencia-sucursal/transferencia-sucursal.component';
 import { TransferenciaSucursalService } from './modulos/sgo/services/transferenciaSucursal.services';
->>>>>>> 185691a84fc49b2bd4c574f8c24f3857663b3b6f
+import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
+import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarPersonaPedido.service'
+
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
 
@@ -162,15 +160,12 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     GuiaTransferenciaDetalleComponent,
     AdministracionUsuariosComponent,
     CuadraturaBigTicketComponent,
-<<<<<<< HEAD
     GestionBackordersComponent,
-    DespachoBatchNumberComponent
-=======
     DespachoBatchNumberComponent,
     DespachoNumeroCartonComponent,
     LpnbatchNumberComponent,
-    TransferenciaSucursalComponent
->>>>>>> 185691a84fc49b2bd4c574f8c24f3857663b3b6f
+    TransferenciaSucursalComponent,
+    ModificarPersonaPedidoComponent
 
 
   ],
@@ -224,6 +219,7 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     TransferenciaSucursalService,
     ValidadorDatos,
     GestionBackordersService,
+    ModificarPersonaPedidoService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'es-CL' }
   ],

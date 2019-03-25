@@ -4,6 +4,7 @@ import { GestionBackordersModel} from '../../model/gestion-backorders.model';
 import { Subject } from 'rxjs';
 import { DataTableDirective } from 'angular-datatables';
 import { TableConfigSgo } from '../../../sgo/components/util/tableConfigSgo.util';
+import { LogService } from '../../../shared/services/log.service';
 
 
 
@@ -24,7 +25,8 @@ export class GestionBackordersComponent implements OnInit {
 
   arrayBackorders: Array<GestionBackordersModel>;
   constructor(public gestionBackOrdersService : GestionBackordersService,public configTable:TableConfigSgo) {
-
+              console.log(gestionBackOrdersService.getUsers());
+              
    }
 
   ngOnInit() {
@@ -65,8 +67,6 @@ export class GestionBackordersComponent implements OnInit {
     this.dtTrigger.next();
   }
 
-  sdfsdf() : void{
-    
-  }
+
 
 }
