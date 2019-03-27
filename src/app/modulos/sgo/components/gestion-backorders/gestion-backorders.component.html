@@ -8,38 +8,79 @@
                 <div class="columns ">
                     <div class="column ">
                         <div class="field ">
-                            <label class="label is-small ">Id Usuario</label>
-                            <div class="control ">
-                                <input class="input" type="text ">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column ">
-                        <div class="field ">
-                            <label class="label is-small ">Nombre</label>
-                            <div class="control">
-                                <input class="input is-disabled " type="text ">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column ">
-                        <div class="field ">
-                            <label class="label is-small ">Contraseña</label>
-                            <div class="control ">
-                                <input class="input " type="password">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column ">
-                        <div class="field ">
-                            <label class="label is-small ">Sucursal</label>
+                            <label class="label is-small ">Canal de Venta</label>
                             <div class="control ">
                                 <div class="select">
-                                    <select>
-                                              <option>Select dropdown</option>
-                                              <option>With options</option>
+                                    <select [(ngModel)]="selectCanalVentas" (change)="activity()">
+                                            <option value='0' disabled>Seleccione</option>
+                                              <option *ngFor="let element of canalVentas"  [value]="element.id" >{{element.tienda}}</option>
                                     </select>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column ">
+                        <div class="field ">
+                            <label class="label is-small ">Canal de Despacho o Entraga</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select [(ngModel)]="selectCanalVentaDespacho " (change)="activity()"> 
+                                        <option value='0' disabled>Seleccione</option>
+                                            <option *ngFor="let element of canalDespachos" [value]="element.id" >{{element.tienda}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column ">
+                        <div class="field ">
+                            <label class="label is-small ">Modelo de Despacho</label>
+                            <div class="control ">
+                                <div class="select">
+                                    <select [(ngModel)]="selectModeloDespachos" (change)="activity()">
+                                            <option value='0' disabled>Seleccione</option>
+                                            <option *ngFor="let element of modeloDespachos"  [value]="element.id">{{element.tienda}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column ">
+                        <div class="field ">
+                            <label class="label is-small ">Motivo Backorder</label>
+                            <div class="control ">
+                                <div class="select">
+                                    <select [(ngModel)]="selectMotivosBackorder" (change)="activity()">
+                                            <option value='0' disabled>Seleccione</option>
+                                            <option *ngFor="let element of motivosBackorder"  [value]="element.id">{{element.tienda}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+
+                    <div class="column is-3">
+                        <div class="field">
+                            <label for="" class="label is-small">Desde</label>
+                            <div class="control">
+                                <my-date-picker disabled></my-date-picker>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="field">
+                            <label for="" class="label is-small">Hasta</label>
+                            <div class="control">
+                                <my-date-picker disabled></my-date-picker>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="field">
+                            <div class="control" style="margin-top: 21px;;">
+                                <a class="button is-info" type="button " (click)="getCanalVentas()">Buscar</a>
                             </div>
                         </div>
                     </div>
@@ -50,9 +91,15 @@
                         <table style="padding-top: 3px;" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
                             <thead>
                                 <tr>
-                                    <th>ID Permiso</th>
-                                    <th>Accion</th>
-                                    <th>Acceso</th>
+                                    <th>N° OC</th>
+                                    <th>Modelo de Despacho</th>
+                                    <th>Motivo Backorder</th>
+                                    <th>Fecha Backorder</th>
+                                    <th>SKU</th>
+                                    <th>Desc. SKU</th>
+                                    <th>Cantidad</th>
+                                    <th>Detalle</th>
+                                    <th>Gestion</th>
                                 </tr>
                             </thead>
 

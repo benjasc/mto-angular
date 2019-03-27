@@ -1,10 +1,11 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-import { GestionBackordersService } from '../../services/gestion-backorders.service';
-import { GestionBackordersModel} from '../../model/gestion-backorders.model';
+import { NgForm } from '@angular/forms';
+import { BackordersService } from '../../services/backorders.service';
 import { Subject } from 'rxjs';
 import { DataTableDirective } from 'angular-datatables';
 import { TableConfigSgo } from '../../../sgo/components/util/tableConfigSgo.util';
 import { LogService } from '../../../shared/services/log.service';
+
 
 
 
@@ -16,6 +17,17 @@ import { LogService } from '../../../shared/services/log.service';
   styleUrls: ['./gestion-backorders.component.scss']
 })
 export class GestionBackordersComponent implements OnInit {
+  canalVentas:any[] = [];
+  canalDespachos:any[] = [];
+  modeloDespachos:any[] = [];
+  motivosBackorder:any[] = [];
+
+  selectCanalVentas:String = '0';
+  selectCanalVentaDespacho:String = '0';
+  selectModeloDespachos:string = '0';
+  selectMotivosBackorder:string = '0';
+
+
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
 
@@ -23,10 +35,13 @@ export class GestionBackordersComponent implements OnInit {
   dtOptions: any;
   dtTrigger:Subject<any> = new Subject();
 
-  arrayBackorders: Array<GestionBackordersModel>;
-  constructor(public gestionBackOrdersService : GestionBackordersService,public configTable:TableConfigSgo) {
-              console.log(gestionBackOrdersService.getUsers());
-              
+  constructor(private backOrdersService : BackordersService,private configTable:TableConfigSgo) {
+             this.getCanalVentas();
+             this.getCanalDespachos();
+             this.getModeloDespachos();
+             this.getMotivosBackorder(); 
+             console.log(this.selectCanalVentaDespacho);
+             
    }
 
   ngOnInit() {
@@ -47,9 +62,84 @@ export class GestionBackordersComponent implements OnInit {
     });
   }
 
+  getCanalVentas(){
+    this.backOrdersService.getCanalVentas().subscribe(res=>{
+        this.canalVentas = res.json();
 
-  usuarios(){
-    console.log("xdfsdf");
+    },err=>{
+          console.log(err);
+    });
+    
+  }
+  getCanalDespachos(){
+    this.backOrdersService.getCanalDespachos().subscribe(res=>{
+      console.log(res.json());
+      
+        this.canalDespachos = res.json();
+        
+    },err=>{
+          console.log(err);
+    });
+    
+  }
+  getModeloDespachos(){
+    this.backOrdersService.getModeloDespachos().subscribe(res=>{
+        this.modeloDespachos = res.json();
+        
+    },err=>{
+          console.log(err);
+    });
+    
+  }
+  getMotivosBackorder(){
+    this.backOrdersService.getMotivosBackorder().subscribe(res=>{
+        this.motivosBackorder = res.json();
+        
+    },err=>{
+          console.log(err);
+    });
+    
+  }
+
+  activity() {
+    console.log(this.selectCanalVentaDespacho);
+  }
+  x(x : NgForm){
+    console.log(x.value);
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* usuarios(){
     this.gestionBackOrdersService.getUsers().subscribe(
       
       res=>{
@@ -69,4 +159,4 @@ export class GestionBackordersComponent implements OnInit {
 
 
 
-}
+} */

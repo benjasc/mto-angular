@@ -91,7 +91,7 @@ import { AdministracionUsuariosComponent } from './modulos/sgo/components/admini
 import { DespachoBatchNumberComponent } from './modulos/sgo/components/despacho-batch-number/despacho-batch-number.component';
 import { CuadraturaService } from './modulos/sgo/services/cuadratura.services';
 import { DespachoBatchNumberService } from './modulos/sgo/services/despachoBN.services';
-import { GestionBackordersService } from './modulos/sgo/services/gestion-backorders.service';
+import { BackordersService } from './modulos/sgo/services/backorders.service';
 import { DespachoNumCartonService } from './modulos/sgo/services/despachoNumCarton.services';
 import { DespachoNumeroCartonComponent } from './modulos/sgo/components/despacho-numero-carton/despacho-numero-carton.component';
 import { LpnbatchNumberComponent } from './modulos/sgo/components/lpnbatch-number/lpnbatch-number.component';
@@ -100,6 +100,7 @@ import { TransferenciaSucursalComponent } from './modulos/sgo/components/transfe
 import { TransferenciaSucursalService } from './modulos/sgo/services/transferenciaSucursal.services';
 import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
 import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarPersonaPedido.service'
+
 
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
@@ -165,7 +166,8 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     DespachoNumeroCartonComponent,
     LpnbatchNumberComponent,
     TransferenciaSucursalComponent,
-    ModificarPersonaPedidoComponent
+    ModificarPersonaPedidoComponent,
+    
 
 
   ],
@@ -218,7 +220,7 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     LpnBatchNumberService,
     TransferenciaSucursalService,
     ValidadorDatos,
-    GestionBackordersService,
+    BackordersService,
     ModificarPersonaPedidoService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'es-CL' }
