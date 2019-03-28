@@ -65,7 +65,7 @@ export class TableConfigSgo {
     pagingType: 'full_numbers',
     pageLength: 10,
     dom: 'Bfrtip',
-    buttons: ['csv', 'excel'],
+    buttons: ['excel'],
     responsive: false,
     scrollX: false
   };

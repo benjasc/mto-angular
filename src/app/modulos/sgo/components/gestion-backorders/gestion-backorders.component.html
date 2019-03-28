@@ -11,7 +11,7 @@
                             <label class="label is-small ">Canal de Venta</label>
                             <div class="control ">
                                 <div class="select">
-                                    <select [(ngModel)]="selectCanalVentas" (change)="activity()">
+                                    <select [(ngModel)]="selectCanalVentas">
                                             <option value='0' disabled>Seleccione</option>
                                               <option *ngFor="let element of canalVentas"  [value]="element.id" >{{element.tienda}}</option>
                                     </select>
@@ -24,7 +24,7 @@
                             <label class="label is-small ">Canal de Despacho o Entraga</label>
                             <div class="control">
                                 <div class="select">
-                                    <select [(ngModel)]="selectCanalVentaDespacho " (change)="activity()"> 
+                                    <select [(ngModel)]="selectCanalVentaDespacho "> 
                                         <option value='0' disabled>Seleccione</option>
                                             <option *ngFor="let element of canalDespachos" [value]="element.id" >{{element.tienda}}</option>
                                     </select>
@@ -37,7 +37,7 @@
                             <label class="label is-small ">Modelo de Despacho</label>
                             <div class="control ">
                                 <div class="select">
-                                    <select [(ngModel)]="selectModeloDespachos" (change)="activity()">
+                                    <select [(ngModel)]="selectModeloDespacho">
                                             <option value='0' disabled>Seleccione</option>
                                             <option *ngFor="let element of modeloDespachos"  [value]="element.id">{{element.tienda}}</option>
                                     </select>
@@ -50,7 +50,7 @@
                             <label class="label is-small ">Motivo Backorder</label>
                             <div class="control ">
                                 <div class="select">
-                                    <select [(ngModel)]="selectMotivosBackorder" (change)="activity()">
+                                    <select [(ngModel)]="selectMotivoBackorder">
                                             <option value='0' disabled>Seleccione</option>
                                             <option *ngFor="let element of motivosBackorder"  [value]="element.id">{{element.tienda}}</option>
                                     </select>
@@ -80,7 +80,7 @@
                     <div class="column is-3">
                         <div class="field">
                             <div class="control" style="margin-top: 21px;;">
-                                <a class="button is-info" type="button " (click)="getCanalVentas()">Buscar</a>
+                                <a class="button is-info" type="button " (click)="verBackorder()">Buscar</a>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                 <div class="card">
                     <div class="card-content">
 
-                        <table style="padding-top: 3px;" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+                        <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
                             <thead>
                                 <tr>
                                     <th>N° OC</th>
@@ -104,22 +104,26 @@
                             </thead>
 
                             <tbody>
-                                <tr *ngFor="let x of arrayBackorders">
-                                    <td>{{x.idpermiso}}</td>
-                                    <td>{{x.accion}}</td>
-                                    <td>{{x.acceso}}</td>
+                                <tr *ngFor="let element of listaBackorders">
+                                    <td>{{element.idorder}}</td>
+                                    <td>{{element.modeloDespacho}}</td>
+                                    <td>{{element.motivoBackorder}}</td>
+                                    <td>{{element.created_at}}</td>
+                                    <td>{{element.sku}}</td>
+                                    <td>{{element.producto}}</td>
+                                    <td>{{element.amount}}</td>
+                                    <td><a class="button is-small is-info">Detalle</a></td>
+                                    <td><a class="button is-small is-info">Gestionar</a></td>
                                 </tr>
 
                             </tbody>
-                            <!-- <a *ngIf='emailInfo.results.length > 0' class="button is-small is-success" >Exportar</a> -->
 
                         </table>
                     </div>
 
                 </div>
                 <br><br>
-                <a class="button is-danger">Cancelar</a>
-                <button class="button is-link" (click)="usuarios()">Guardar</button>
+                <a class="button is-danger">Salir</a>
 
             </div>
 

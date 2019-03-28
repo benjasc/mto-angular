@@ -76,7 +76,7 @@ import { EmisionUnitariaGdeComponent } from './modulos/gde/components/emisionUni
 import { fromPromise } from 'rxjs/observable/fromPromise';
 import { DataTablesModule } from 'angular-datatables';
 import { TableConfigEmisionGDE } from './modulos/gde/util/tableConfig.util';
-import { TableConfigSgo } from './modulos/sgo/components/util/tableConfigSgo.util';
+import { TableConfigSgo } from './modulos/sgo/util/tableConfigSgo.util';
 import { ModalConfigTransporteComponent } from './modulos/gde/services/configTransporteModal/configTransporte.component';
 import { EmisionMasivaGdeComponent } from './modulos/gde/components/emisionMasivaGde/emisionMasivaGde.component';
 import { ModalDetalleMasivoComponent } from './modulos/gde/components/emisionMasivaGde/emisionMasivaGdeModal/detalleEmisionMasivaGde.component';
@@ -99,7 +99,8 @@ import { LpnBatchNumberService } from './modulos/sgo/services/lpnBatchNumber.ser
 import { TransferenciaSucursalComponent } from './modulos/sgo/components/transferencia-sucursal/transferencia-sucursal.component';
 import { TransferenciaSucursalService } from './modulos/sgo/services/transferenciaSucursal.services';
 import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
-import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarPersonaPedido.service'
+import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarPersonaPedido.service';
+import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 
 
 
@@ -167,8 +168,7 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     LpnbatchNumberComponent,
     TransferenciaSucursalComponent,
     ModificarPersonaPedidoComponent,
-    
-
+    IngresoReservasCorporativasComponent
 
   ],
   imports: [

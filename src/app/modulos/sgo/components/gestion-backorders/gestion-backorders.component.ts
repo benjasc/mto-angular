@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { BackordersService } from '../../services/backorders.service';
 import { Subject } from 'rxjs';
 import { DataTableDirective } from 'angular-datatables';
-import { TableConfigSgo } from '../../../sgo/components/util/tableConfigSgo.util';
+import { TableConfigSgo } from '../../../sgo/util/tableConfigSgo.util';
 import { LogService } from '../../../shared/services/log.service';
 
 
@@ -21,11 +21,12 @@ export class GestionBackordersComponent implements OnInit {
   canalDespachos:any[] = [];
   modeloDespachos:any[] = [];
   motivosBackorder:any[] = [];
+  listaBackorders : any[] = [];
 
-  selectCanalVentas:String = '0';
-  selectCanalVentaDespacho:String = '0';
-  selectModeloDespachos:string = '0';
-  selectMotivosBackorder:string = '0';
+  selectCanalVentas:string ='0';
+  selectCanalVentaDespacho:string='0' ;
+  selectModeloDespacho:string='0';
+  selectMotivoBackorder:string='0';
 
 
   @ViewChild(DataTableDirective)
@@ -40,12 +41,10 @@ export class GestionBackordersComponent implements OnInit {
              this.getCanalDespachos();
              this.getModeloDespachos();
              this.getMotivosBackorder(); 
-             console.log(this.selectCanalVentaDespacho);
-             
    }
 
   ngOnInit() {
-    this.dtOptions = this.configTable.dtOptionsExport;
+    this.dtOptions = this.configTable.dtOptionsWithinScrollX;
   }
   ngAfterViewInit(): void {
     this.dtTrigger.next();
@@ -101,16 +100,24 @@ export class GestionBackordersComponent implements OnInit {
     
   }
 
-  activity() {
-    console.log(this.selectCanalVentaDespacho);
+  verBackorder(){
+    this.backOrdersService.getBackorder(this.selectCanalVentas,
+      this.selectCanalVentaDespacho,this.selectModeloDespacho,this.selectMotivoBackorder).subscribe(res=>{
+        this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
+          dtInstance.destroy();
+          this.dtTrigger.next();
+        });
+        console.log(res.json());
+        
+        this.listaBackorders = res.json();
+        
+    },err=>{ console.log("Error en la peticion"); });
+
+    this.dtTrigger.next();
   }
-  x(x : NgForm){
-    console.log(x.value);
-    
-  }
+
+ 
 }
-
-
 
 
 
