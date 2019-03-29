@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {InputPipe} from '../../../../../pipe/inputs.pipe'
 
 @Component({
   selector: 'app-ingreso-reservas-corporativas',
@@ -9,7 +8,7 @@ import {InputPipe} from '../../../../../pipe/inputs.pipe'
 export class IngresoReservasCorporativasComponent implements OnInit {
 
 
-  constructor(private inputPipe : InputPipe) { 
+  constructor() { 
     
   }
 

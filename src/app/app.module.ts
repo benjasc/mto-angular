@@ -101,6 +101,7 @@ import { TransferenciaSucursalService } from './modulos/sgo/services/transferenc
 import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
 import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarPersonaPedido.service';
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
+import { InputsDirective } from './directives/inputs.directive';
 
 
 
@@ -168,7 +169,8 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     LpnbatchNumberComponent,
     TransferenciaSucursalComponent,
     ModificarPersonaPedidoComponent,
-    IngresoReservasCorporativasComponent
+    IngresoReservasCorporativasComponent,
+    InputsDirective
 
   ],
   imports: [

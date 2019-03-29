@@ -10,7 +10,7 @@
                         <div class="columns ">
                             <div class="column ">
                                 <div class="field ">
-                                    <label class="label is-small ">Código Artículo</label>
+                                    <label class="label is-small ">C&oacute;digo Art&iacute;culo</label>
                                     <div class="control">
                                         <input class="input " type="text ">
                                     </div>
@@ -20,7 +20,7 @@
                                 <div class="field ">
                                     <label class="label is-small ">Cantidad a Reservar</label>
                                     <div class="control ">
-                                        <input class="input" min="1" type="number" (keyup)="validarNumero($event.target.value)">
+                                        <input class="input" min="1" max="10000" maxlength="4" type="number" appInputs>
                                     </div>
                                 </div>
                             </div>
@@ -50,6 +50,113 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="column is-1">
+                                <div class="field">
+                                    <div class="control" style="margin-top: 21px;;">
+                                        <a class="button is-info" type="button ">Buscar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="columns ">
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Bodega de Stock</label>
+                                    <div class="control ">
+                                        <div class="select">
+                                            <select [(ngModel)]="selectMotivoBackorder" aria-readonly="true">
+                                                <option value='0' disabled>Seleccione</option>
+                                                <option *ngFor="let element of motivosBackorder"  [value]="element.id">{{element.tienda}}</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Sucursal de Despacho</label>
+                                    <div class="control">
+                                        <input class="input " type="text ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Jornada de Despacho</label>
+                                    <div class="control ">
+                                        <div class="select">
+                                            <select [(ngModel)]="selectModeloDespacho">
+                                                <option value='0' disabled>Seleccione</option>
+                                                <option *ngFor="let element of modeloDespachos"  [value]="element.id">{{element.tienda}}</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Stock Disponible</label>
+                                    <div class="control ">
+                                        <input class="input" min="1" max="10000" maxlength="4" type="number" appInputs>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label for="" class="label is-small">Fecha Despacho</label>
+                                    <div class="control">
+                                        <my-date-picker disabled></my-date-picker>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="columns ">
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">RUC Empresa</label>
+                                    <div class="control">
+                                        <input class="input " type="text ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Raz&oacute;n Social</label>
+                                    <div class="control">
+                                        <input class="input " type="text ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Orden de Compra</label>
+                                    <div class="control">
+                                        <input class="input " type="text ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label for="" class="label is-small">Fecha Caducidad</label>
+                                    <div class="control">
+                                        <my-date-picker disabled></my-date-picker>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -57,6 +164,7 @@
                 </div>
                 <br><br>
                 <a class="button is-danger">Salir</a>
+                <a class="button is-info">Guardar</a>
 
             </div>
 
