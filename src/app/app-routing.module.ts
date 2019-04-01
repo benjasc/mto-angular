@@ -37,14 +37,14 @@ import { TransferenciaSucursalComponent } from './modulos/sgo/components/transfe
 import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
-
-
+import { HistorialDespachosComponent } from './modulos/sgo/components/historial-despachos/historial-despachos.component';
 
 const routes: Routes = [
    /* Modulo Venta POS y Empresa Peru */
   { path: 'ingreso-reservas-corporativas', component: IngresoReservasCorporativasComponent},
   { path: 'despacho-ventas-corporativas', component: DespachoVentasCorporativasComponent},
   /* Fin Modulo Venta POS y Empresa Peru */
+  { path: 'historialDespacho', component: HistorialDespachosComponent},
   { path: 'modificar-persona-pedido', component: ModificarPersonaPedidoComponent},
   { path: 'gestion-backorders', component: GestionBackordersComponent },
   { path: 'administracion-usuarios', component: AdministracionUsuariosComponent },
