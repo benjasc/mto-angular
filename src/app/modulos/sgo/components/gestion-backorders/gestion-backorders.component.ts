@@ -1,22 +1,15 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, Renderer,Inject } from '@angular/core';
 import { BackordersService } from '../../services/backorders.service';
 import { Subject } from 'rxjs';
 import { DataTableDirective } from 'angular-datatables';
 import { TableConfigSgo } from '../../../sgo/util/tableConfigSgo.util';
-import { LogService } from '../../../shared/services/log.service';
-
-
-
-
-
 
 @Component({
   selector: 'app-gestion-backorders',
   templateUrl: './gestion-backorders.component.html',
   styleUrls: ['./gestion-backorders.component.scss']
 })
-export class GestionBackordersComponent implements OnInit {
+export class GestionBackordersComponent  {
   canalVentas:any[] = [];
   canalDespachos:any[] = [];
   modeloDespachos:any[] = [];
@@ -28,7 +21,6 @@ export class GestionBackordersComponent implements OnInit {
   selectModeloDespacho:string='0';
   selectMotivoBackorder:string='0';
 
-
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
 
@@ -36,15 +28,15 @@ export class GestionBackordersComponent implements OnInit {
   dtOptions: any;
   dtTrigger:Subject<any> = new Subject();
 
-  constructor(private backOrdersService : BackordersService,private configTable:TableConfigSgo) {
+  constructor(private backOrdersService : BackordersService , private configTable: TableConfigSgo) {
              this.getCanalVentas();
              this.getCanalDespachos();
              this.getModeloDespachos();
              this.getMotivosBackorder(); 
    }
+   ngOnInit() {
+    this.dtOptions = this.configTable.dtOptionsExport;
 
-  ngOnInit() {
-    this.dtOptions = this.configTable.dtOptionsWithinScrollX;
   }
   ngAfterViewInit(): void {
     this.dtTrigger.next();
@@ -60,6 +52,7 @@ export class GestionBackordersComponent implements OnInit {
       this.dtTrigger.next();
     });
   }
+
 
   getCanalVentas(){
     this.backOrdersService.getCanalVentas().subscribe(res=>{

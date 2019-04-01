@@ -102,6 +102,8 @@ import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modifi
 import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarPersonaPedido.service';
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 import { InputsDirective } from './directives/inputs.directive';
+import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
+import { ScrollTableComponent } from './modulos/sgo/components/shared/components/scroll-table/scroll-table.component';
 
 
 
@@ -170,8 +172,8 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     TransferenciaSucursalComponent,
     ModificarPersonaPedidoComponent,
     IngresoReservasCorporativasComponent,
-    InputsDirective
-
+    InputsDirective,
+    DespachoVentasCorporativasComponent
   ],
   imports: [
     BrowserModule,
@@ -224,6 +226,7 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     ValidadorDatos,
     BackordersService,
     ModificarPersonaPedidoService,
+    ScrollTableComponent,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'es-CL' }
   ],

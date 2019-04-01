@@ -31,9 +31,9 @@ export class TableConfigSgo {
     pagingType: 'full_numbers',
     pageLength: 3,
     dom: 'Bfrtip',
-    buttons: [],
+    buttons: ['excel'],
     responsive: false,
-    scrollX: false
+    scrollX: true
   };
 
   dtOptionsWithinScrollX: any = {
@@ -65,7 +65,7 @@ export class TableConfigSgo {
     pagingType: 'full_numbers',
     pageLength: 10,
     dom: 'Bfrtip',
-    buttons: ['excel'],
+    buttons: ['csv', 'excel'],
     responsive: false,
     scrollX: false
   };
