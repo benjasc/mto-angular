@@ -39,9 +39,16 @@ import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/v
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
 import { HistorialDespachosComponent } from './modulos/sgo/components/historial-despachos/historial-despachos.component';
 import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
+import { SistemaGestionOrdenesComponent } from './modulos/sgo/components/consultaOC/sistema-gestion-ordenes/sistema-gestion-ordenes.component';
+import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/flujo-despacho/flujo-despacho.component';
+
+
 
 
 const routes: Routes = [
+  /* Modulo Sistema de gestion de Ordenes*/
+  { path: 'sistema-gestion-ordenes', component: SistemaGestionOrdenesComponent},
+  { path: 'flujo-despacho', component: FlujoDespachoComponent},
    /* Modulo Venta POS y Empresa Peru */
   { path: 'ingreso-reservas-corporativas', component: IngresoReservasCorporativasComponent},
   { path: 'despacho-ventas-corporativas', component: DespachoVentasCorporativasComponent},

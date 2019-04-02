@@ -107,6 +107,8 @@ import { HistorialDespachosComponent } from './modulos/sgo/components/historial-
 import { HistorialDespachoService } from './modulos/sgo/services/historialDespacho.services';
 import { SucursalRetiroComponent } from './modulos/sgo/components/sucursal-retiro/sucursal-retiro.component';
 import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
+import { SistemaGestionOrdenesComponent } from './modulos/sgo/components/consultaOC/sistema-gestion-ordenes/sistema-gestion-ordenes.component';
+import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/flujo-despacho/flujo-despacho.component';
 
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
@@ -178,8 +180,9 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     DespachoVentasCorporativasComponent,
     HistorialDespachosComponent,
     SucursalRetiroComponent,
-    AnulacionReservasComponent
-
+    AnulacionReservasComponent,
+    SistemaGestionOrdenesComponent,
+    FlujoDespachoComponent
   ],
   imports: [
     BrowserModule,

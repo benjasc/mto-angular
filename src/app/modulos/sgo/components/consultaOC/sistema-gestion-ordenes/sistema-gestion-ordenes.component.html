@@ -1,0 +1,234 @@
+<section class="container is-fluid ">
+    <div class="card ">
+        <div class="card-header ">
+            <div class="card-header-title">
+                Sistema de Gestión de Proyectos
+            </div>
+            <div class="card-header-title">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="OC/RUT/CUD">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                        Buscar
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-content ">
+            <div class="content">
+                <div class="card">
+                    <div class="button is-info is-small">Datos del Cliente</div>
+                    <div class="button is-light is-small">Ver Registro</div>
+                    <div class="card-content">
+                        <div class="columns ">
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Nombre</label>
+                                    <div class="control">
+                                        <input class="input " type="text" appInputs>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-2">
+                                <div class="field ">
+                                    <label class="label is-small ">RUT</label>
+                                    <div class="control">
+                                        <input class="input " type="text" appInputs>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-2">
+                                <div class="field ">
+                                    <label class="label is-small ">Telefono Principal</label>
+                                    <div class="control ">
+                                        <div class="select">
+                                            <select>
+                                              <option value='0' disabled>Seleccione</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field ">
+                                    <label class="label is-small ">Email Principal</label>
+                                    <div class="control ">
+                                        <div class="select">
+                                            <select>
+                                              <option value='0' disabled>Seleccione</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column ">
+                                <div class="field ">
+                                    <label class="label is-small ">Direccion Principal</label>
+                                    <div class="control ">
+                                        <div class="select">
+                                            <select>
+                                            <option value='0' disabled>Seleccione</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="card">
+                    <div class="button is-info is-small">Productos Comprados</div>
+                    <div class="button is-light is-small">Historial de Compras</div>
+                    <div class="card-content">
+                        <table datatable [dtOptions]="dtOptions[0]" [dtTrigger]="dtTrigger" class="row-border hover table" style="padding-top: 10px;" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>SKU</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Fecha Compra</th>
+                                    <th>Canal</th>
+                                    <th>Estado Despacho</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let element of listaBackorders">
+                                    <td>{{ element.idorder }}</td>
+                                    <td>{{ element.modeloDespacho }}</td>
+                                    <td>{{ element.motivoBackorder }}</td>
+                                    <td>{{ element.created_at }}</td>
+                                    <td>{{ element.sku }}</td>
+                                    <td>{{ element.producto }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="card  ">
+
+                    <div class="button is-info is-small" style="cursor:text">Detalle de Compra</div>
+                    <div class="card-content ">
+                        <table datatable [dtOptions]="dtOptions[0]" [dtTrigger]="dtTrigger" class="row-border hover table" style="padding-top: 10px;" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>SKU</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Fecha Compra</th>
+                                    <th>Canal</th>
+                                    <th>Estado Despacho</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let element of listaBackorders">
+                                    <td>{{ element.idorder }}</td>
+                                    <td>{{ element.modeloDespacho }}</td>
+                                    <td>{{ element.motivoBackorder }}</td>
+                                    <td>{{ element.created_at }}</td>
+                                    <td>{{ element.sku }}</td>
+                                    <td>{{ element.producto }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br><br>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <div class="card">
+                                    <div class="button is-info is-small" style="cursor:text">Medio de Pago</div>
+                                    <div class="card-content ">
+                                        <div class="columns">
+                                            <div class="column ">
+                                                <div class="field ">
+                                                    <div class="control ">
+                                                        <article class="message is-info">
+                                                            <div class="message-body has-text-centered">
+                                                                TARJETA RIPLEY - PAN ****3013 - COD.AUTORIZADO:13532
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="columns">
+                                            <div class="column ">
+                                                <div class="field ">
+                                                    <label class="label is-small ">Datos de Despacho</label>
+                                                    <div class="control ">
+                                                        <input class="input " readonly type="text ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="columns">
+                                            <div class="column ">
+                                                <div class="field ">
+                                                    <label class="label is-small ">Entrega Compromiso</label>
+                                                    <div class="control ">
+                                                        <input class="input " readonly type="text ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column ">
+                                                <div class="field ">
+                                                    <label class="label is-small ">Entrega conforme</label>
+                                                    <div class="control ">
+                                                        <input class="input " readonly type="text ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-8">
+                                <div class="card">
+                                    <div class="button is-info is-small" style="cursor:text">Detalle de Compra</div>
+                                    <div class="card-content">
+                                        <table datatable [dtOptions]="dtOptions[0]" [dtTrigger]="dtTrigger" class="row-border hover table" style="padding-top: 10px;" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>SKU</th>
+                                                    <th>Producto</th>
+                                                    <th>Precio</th>
+                                                    <th>Fecha Compra</th>
+                                                    <th>Canal</th>
+                                                    <th>Estado Despacho</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr *ngFor="let element of listaBackorders">
+                                                    <td>{{ element.idorder }}</td>
+                                                    <td>{{ element.modeloDespacho }}</td>
+                                                    <td>{{ element.motivoBackorder }}</td>
+                                                    <td>{{ element.created_at }}</td>
+                                                    <td>{{ element.sku }}</td>
+                                                    <td>{{ element.producto }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <a class="button is-danger ">Salir</a>
+                <a class="button is-info ">Guardar</a>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
