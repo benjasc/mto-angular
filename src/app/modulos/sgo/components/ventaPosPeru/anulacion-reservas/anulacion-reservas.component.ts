@@ -5,11 +5,11 @@ import { TableConfigSgo } from '../../../util/tableConfigSgo.util';
 
 
 @Component({
-  selector: 'app-despacho-ventas-corporativas',
-  templateUrl: './despacho-ventas-corporativas.component.html',
-  styleUrls: ['./despacho-ventas-corporativas.component.scss']
+  selector: 'app-anulacion-reservas',
+  templateUrl: './anulacion-reservas.component.html',
+  styleUrls: ['./anulacion-reservas.component.scss']
 })
-export class DespachoVentasCorporativasComponent implements OnInit, OnDestroy, AfterViewInit {
+export class AnulacionReservasComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;

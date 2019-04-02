@@ -38,11 +38,14 @@ import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modifi
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
 import { HistorialDespachosComponent } from './modulos/sgo/components/historial-despachos/historial-despachos.component';
+import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
+
 
 const routes: Routes = [
    /* Modulo Venta POS y Empresa Peru */
   { path: 'ingreso-reservas-corporativas', component: IngresoReservasCorporativasComponent},
   { path: 'despacho-ventas-corporativas', component: DespachoVentasCorporativasComponent},
+  { path: 'anulacion-reservas', component: AnulacionReservasComponent},
   /* Fin Modulo Venta POS y Empresa Peru */
   { path: 'historialDespacho', component: HistorialDespachosComponent},
   { path: 'modificar-persona-pedido', component: ModificarPersonaPedidoComponent},
