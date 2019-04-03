@@ -37,24 +37,35 @@ import { TransferenciaSucursalComponent } from './modulos/sgo/components/transfe
 import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
-import { HistorialDespachosComponent } from './modulos/sgo/components/historial-despachos/historial-despachos.component';
+import { HistorialDespachosComponent } from './modulos/sgo/components/consultaOC/historial-despachos/historial-despachos.component';
 import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
 import { SistemaGestionOrdenesComponent } from './modulos/sgo/components/consultaOC/sistema-gestion-ordenes/sistema-gestion-ordenes.component';
 import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/flujo-despacho/flujo-despacho.component';
+import { CambiarSucursalRetiroComponent } from './modulos/sgo/components/scgo/cambiar-sucursal-retiro/cambiar-sucursal-retiro.component';
+import {  BuscarPedidosComponent} from './modulos/sgo/components/gestionRetirosCambios/buscar-pedidos/buscar-pedidos.component';
+import {  ConfirmarTicketComponent} from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
+
+
+
 
 
 
 
 const routes: Routes = [
+    /*Módulo de gestion de retiros y cambios*/
+   { path: 'buscar-pedidos', component: BuscarPedidosComponent},
+   { path: 'confirmar-ticket', component: ConfirmarTicketComponent},
+    /*Módulo de servicio al cliente y gestión de la orden*/
+  { path: 'cambiar-sucursal-retiro', component: CambiarSucursalRetiroComponent},
   /* Modulo Sistema de gestion de Ordenes*/
   { path: 'sistema-gestion-ordenes', component: SistemaGestionOrdenesComponent},
   { path: 'flujo-despacho', component: FlujoDespachoComponent},
+  { path: 'historialDespacho', component: HistorialDespachosComponent},
    /* Modulo Venta POS y Empresa Peru */
   { path: 'ingreso-reservas-corporativas', component: IngresoReservasCorporativasComponent},
   { path: 'despacho-ventas-corporativas', component: DespachoVentasCorporativasComponent},
   { path: 'anulacion-reservas', component: AnulacionReservasComponent},
   /* Fin Modulo Venta POS y Empresa Peru */
-  { path: 'historialDespacho', component: HistorialDespachosComponent},
   { path: 'modificar-persona-pedido', component: ModificarPersonaPedidoComponent},
   { path: 'gestion-backorders', component: GestionBackordersComponent },
   { path: 'administracion-usuarios', component: AdministracionUsuariosComponent },
