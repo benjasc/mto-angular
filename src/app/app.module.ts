@@ -111,6 +111,8 @@ import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/fluj
 import { CambiarSucursalRetiroComponent } from './modulos/sgo/components/scgo/cambiar-sucursal-retiro/cambiar-sucursal-retiro.component';
 import { BuscarPedidosComponent } from './modulos/sgo/components/gestionRetirosCambios/buscar-pedidos/buscar-pedidos.component';
 import { ConfirmarTicketComponent } from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
+import { ActaRetiroComponent } from './modulos/sgo/components/gestionRetirosCambios/acta-retiro/acta-retiro.component';
+import { CrudActaRetiroComponent } from './modulos/sgo/components/gestionRetirosCambios/crud-acta-retiro/crud-acta-retiro.component';
 
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
@@ -186,7 +188,9 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     FlujoDespachoComponent,
     CambiarSucursalRetiroComponent,
     BuscarPedidosComponent,
-    ConfirmarTicketComponent
+    ConfirmarTicketComponent,
+    ActaRetiroComponent,
+    CrudActaRetiroComponent
     ],
   imports: [
     BrowserModule,
