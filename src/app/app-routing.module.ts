@@ -54,11 +54,17 @@ import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/fluj
 import { CambiarSucursalRetiroComponent } from './modulos/sgo/components/scgo/cambiar-sucursal-retiro/cambiar-sucursal-retiro.component';
 import {  BuscarPedidosComponent} from './modulos/sgo/components/gestionRetirosCambios/buscar-pedidos/buscar-pedidos.component';
 import {  ConfirmarTicketComponent} from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
+import {  ActaRetiroComponent} from './modulos/sgo/components/gestionRetirosCambios/acta-retiro/acta-retiro.component';
+import {  CrudActaRetiroComponent} from './modulos/sgo/components/gestionRetirosCambios/crud-acta-retiro/crud-acta-retiro.component';
+
+
 
 const routes: Routes = [
     /*Módulo de gestion de retiros y cambios*/
    { path: 'buscar-pedidos', component: BuscarPedidosComponent},
    { path: 'confirmar-ticket', component: ConfirmarTicketComponent},
+   { path: 'acta-retiro', component: ActaRetiroComponent},
+   { path: 'crud-acta-retiro', component: CrudActaRetiroComponent},
     /*Módulo de servicio al cliente y gestión de la orden*/
   { path: 'cambiar-sucursal-retiro', component: CambiarSucursalRetiroComponent},
   /* Modulo Sistema de gestion de Ordenes*/
