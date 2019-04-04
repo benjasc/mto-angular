@@ -39,6 +39,16 @@ import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/v
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
 import { HistorialDespachosComponent } from './modulos/sgo/components/consultaOC/historial-despachos/historial-despachos.component';
 import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
+import { DespachosPorEstadoComponent } from './modulos/sgo/components/despachos-por-estado/despachos-por-estado.component';
+import { MantencionDespachoComponent } from './modulos/sgo/components/mantencion-despacho/mantencion-despacho.component';
+import { NcvencimientoRetComponent } from './modulos/sgo/components/ncvencimiento-ret/ncvencimiento-ret.component';
+import { ControlProcesoComponent } from './modulos/sgo/components/control-proceso/control-proceso.component';
+import { ProgramacionPlanificacionAutComponent } from './modulos/sgo/components/programacion-planificacion-aut/programacion-planificacion-aut.component';
+import { IngresoProgPlanAutoComponent } from  './modulos/sgo/components/ingreso-prog-plan-auto/ingreso-prog-plan-auto.component';
+import {MantencionRutasPlanAutoComponent } from './modulos/sgo/components/mantencion-rutas-plan-auto/mantencion-rutas-plan-auto.component';
+import { MantencionProgSectoresComponent } from './modulos/sgo/components/mantencion-prog-sectores/mantencion-prog-sectores.component';
+import {IngresoProgSectoresComponent} from './modulos/sgo/components/ingreso-prog-sectores/ingreso-prog-sectores.component';
+import { PlanificacionRutasDespachoComponent } from './modulos/sgo/components/planificacion-rutas-despacho/planificacion-rutas-despacho.component';
 import { SistemaGestionOrdenesComponent } from './modulos/sgo/components/consultaOC/sistema-gestion-ordenes/sistema-gestion-ordenes.component';
 import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/flujo-despacho/flujo-despacho.component';
 import { CambiarSucursalRetiroComponent } from './modulos/sgo/components/scgo/cambiar-sucursal-retiro/cambiar-sucursal-retiro.component';
@@ -46,12 +56,6 @@ import {  BuscarPedidosComponent} from './modulos/sgo/components/gestionRetirosC
 import {  ConfirmarTicketComponent} from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
 import {  ActaRetiroComponent} from './modulos/sgo/components/gestionRetirosCambios/acta-retiro/acta-retiro.component';
 import {  CrudActaRetiroComponent} from './modulos/sgo/components/gestionRetirosCambios/crud-acta-retiro/crud-acta-retiro.component';
-
-
-
-
-
-
 
 
 
@@ -72,6 +76,17 @@ const routes: Routes = [
   { path: 'despacho-ventas-corporativas', component: DespachoVentasCorporativasComponent},
   { path: 'anulacion-reservas', component: AnulacionReservasComponent},
   /* Fin Modulo Venta POS y Empresa Peru */
+  { path: 'planificacionRutasDespacho', component: PlanificacionRutasDespachoComponent},
+  { path: 'ingresoProgSectores',  component: IngresoProgSectoresComponent},
+  { path: 'mantencionProgSectores', component: MantencionProgSectoresComponent},
+  { path: 'mantencionRutasPlanAuto', component: MantencionRutasPlanAutoComponent},
+  { path: 'ingresoProgPlanAuto', component: IngresoProgPlanAutoComponent},
+  { path: 'progPlanificacionAuto', component: ProgramacionPlanificacionAutComponent},
+  { path: 'controlProceso', component: ControlProcesoComponent},
+  { path: 'ncVencimientoRET', component: NcvencimientoRetComponent},
+  { path: 'mantencionDespacho', component: MantencionDespachoComponent},
+  { path: 'despachoPorEstado', component: DespachosPorEstadoComponent},
+  { path: 'historialDespacho', component: HistorialDespachosComponent},
   { path: 'modificar-persona-pedido', component: ModificarPersonaPedidoComponent},
   { path: 'gestion-backorders', component: GestionBackordersComponent },
   { path: 'administracion-usuarios', component: AdministracionUsuariosComponent },

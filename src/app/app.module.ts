@@ -106,6 +106,26 @@ import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ve
 import { HistorialDespachosComponent } from './modulos/sgo/components/consultaOC/historial-despachos/historial-despachos.component';
 import { HistorialDespachoService } from './modulos/sgo/services/historialDespacho.services';
 import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
+import { DespachosPorEstadoComponent } from './modulos/sgo/components/despachos-por-estado/despachos-por-estado.component';
+import { DespachoPorEstadoService } from './modulos/sgo/services/despachoEstados.Services';
+import { MantencionDespachoComponent } from './modulos/sgo/components/mantencion-despacho/mantencion-despacho.component';
+import { MantencionDespachoService } from './modulos/sgo/services/mantencionDespacho.Services';
+import { NcvencimientoRetComponent } from './modulos/sgo/components/ncvencimiento-ret/ncvencimiento-ret.component';
+import { NcVencimientoRETService } from './modulos/sgo/services/ncVencimientoRET.Services';
+import { ControlProcesoComponent } from './modulos/sgo/components/control-proceso/control-proceso.component';
+import { ControlProcesoService } from './modulos/sgo/services/controlProceso.Services';
+import { ProgramacionPlanificacionAutComponent } from './modulos/sgo/components/programacion-planificacion-aut/programacion-planificacion-aut.component';
+import { ProgPlanificacionAutoService } from './modulos/sgo/services/progPlanificacionAuto.Services';
+import { IngresoProgPlanAutoComponent } from './modulos/sgo/components/ingreso-prog-plan-auto/ingreso-prog-plan-auto.component';
+import { IngresoProgPlanAutoService } from './modulos/sgo/services/ingresoProgPlanAuto.Services';
+import { MantencionRutasPlanAutoComponent } from './modulos/sgo/components/mantencion-rutas-plan-auto/mantencion-rutas-plan-auto.component';
+import { MantencionRutasPlanAutoService } from './modulos/sgo/services/mantencionRutasPlanAuto.Services';
+import { MantencionProgSectoresComponent } from './modulos/sgo/components/mantencion-prog-sectores/mantencion-prog-sectores.component';
+import {MantencionProgSectoresService} from './modulos/sgo/services/mantencionProgSectores.Services';
+import { IngresoProgSectoresComponent } from './modulos/sgo/components/ingreso-prog-sectores/ingreso-prog-sectores.component';
+import {IngresoProgSectoresService } from './modulos/sgo/services/ingresoProgSectores.Services';
+import { PlanificacionRutasDespachoComponent } from './modulos/sgo/components/planificacion-rutas-despacho/planificacion-rutas-despacho.component';
+import {PlanificacionRutasDespachoService} from './modulos/sgo/services/planificacionRutasDespacho.Services';
 import { SistemaGestionOrdenesComponent } from './modulos/sgo/components/consultaOC/sistema-gestion-ordenes/sistema-gestion-ordenes.component';
 import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/flujo-despacho/flujo-despacho.component';
 import { CambiarSucursalRetiroComponent } from './modulos/sgo/components/scgo/cambiar-sucursal-retiro/cambiar-sucursal-retiro.component';
@@ -113,6 +133,7 @@ import { BuscarPedidosComponent } from './modulos/sgo/components/gestionRetirosC
 import { ConfirmarTicketComponent } from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
 import { ActaRetiroComponent } from './modulos/sgo/components/gestionRetirosCambios/acta-retiro/acta-retiro.component';
 import { CrudActaRetiroComponent } from './modulos/sgo/components/gestionRetirosCambios/crud-acta-retiro/crud-acta-retiro.component';
+
 
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
@@ -184,6 +205,17 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     DespachoVentasCorporativasComponent,
     HistorialDespachosComponent,
     AnulacionReservasComponent,
+    DespachosPorEstadoComponent,
+    MantencionDespachoComponent,
+    NcvencimientoRetComponent,
+    ControlProcesoComponent,
+    ProgramacionPlanificacionAutComponent,
+    IngresoProgPlanAutoComponent,
+    MantencionRutasPlanAutoComponent,
+    MantencionProgSectoresComponent,
+    IngresoProgSectoresComponent,
+    PlanificacionRutasDespachoComponent,
+    AnulacionReservasComponent,
     SistemaGestionOrdenesComponent,
     FlujoDespachoComponent,
     CambiarSucursalRetiroComponent,
@@ -192,6 +224,7 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     ActaRetiroComponent,
     CrudActaRetiroComponent
     ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -244,6 +277,16 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     BackordersService,
     ModificarPersonaPedidoService,
     HistorialDespachoService,
+    DespachoPorEstadoService,
+    MantencionDespachoService,
+    NcVencimientoRETService,
+    ControlProcesoService,
+    ProgPlanificacionAutoService,
+    IngresoProgPlanAutoService,
+    MantencionRutasPlanAutoService,
+    MantencionProgSectoresService,
+    IngresoProgSectoresService,
+    PlanificacionRutasDespachoService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'es-CL' }
   ],
