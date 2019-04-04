@@ -39,7 +39,16 @@ import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/v
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
 import { HistorialDespachosComponent } from './modulos/sgo/components/historial-despachos/historial-despachos.component';
 import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
-
+import { DespachosPorEstadoComponent } from './modulos/sgo/components/despachos-por-estado/despachos-por-estado.component';
+import { MantencionDespachoComponent } from './modulos/sgo/components/mantencion-despacho/mantencion-despacho.component';
+import { NcvencimientoRetComponent } from './modulos/sgo/components/ncvencimiento-ret/ncvencimiento-ret.component';
+import { ControlProcesoComponent } from './modulos/sgo/components/control-proceso/control-proceso.component';
+import { ProgramacionPlanificacionAutComponent } from './modulos/sgo/components/programacion-planificacion-aut/programacion-planificacion-aut.component';
+import { IngresoProgPlanAutoComponent } from  './modulos/sgo/components/ingreso-prog-plan-auto/ingreso-prog-plan-auto.component';
+import {MantencionRutasPlanAutoComponent } from './modulos/sgo/components/mantencion-rutas-plan-auto/mantencion-rutas-plan-auto.component';
+import { MantencionProgSectoresComponent } from './modulos/sgo/components/mantencion-prog-sectores/mantencion-prog-sectores.component';
+import {IngresoProgSectoresComponent} from './modulos/sgo/components/ingreso-prog-sectores/ingreso-prog-sectores.component';
+import { PlanificacionRutasDespachoComponent } from './modulos/sgo/components/planificacion-rutas-despacho/planificacion-rutas-despacho.component';
 
 const routes: Routes = [
    /* Modulo Venta POS y Empresa Peru */
@@ -47,6 +56,16 @@ const routes: Routes = [
   { path: 'despacho-ventas-corporativas', component: DespachoVentasCorporativasComponent},
   { path: 'anulacion-reservas', component: AnulacionReservasComponent},
   /* Fin Modulo Venta POS y Empresa Peru */
+  { path: 'planificacionRutasDespacho', component: PlanificacionRutasDespachoComponent},
+  { path: 'ingresoProgSectores',  component: IngresoProgSectoresComponent},
+  { path: 'mantencionProgSectores', component: MantencionProgSectoresComponent},
+  { path: 'mantencionRutasPlanAuto', component: MantencionRutasPlanAutoComponent},
+  { path: 'ingresoProgPlanAuto', component: IngresoProgPlanAutoComponent},
+  { path: 'progPlanificacionAuto', component: ProgramacionPlanificacionAutComponent},
+  { path: 'controlProceso', component: ControlProcesoComponent},
+  { path: 'ncVencimientoRET', component: NcvencimientoRetComponent},
+  { path: 'mantencionDespacho', component: MantencionDespachoComponent},
+  { path: 'despachoPorEstado', component: DespachosPorEstadoComponent},
   { path: 'historialDespacho', component: HistorialDespachosComponent},
   { path: 'modificar-persona-pedido', component: ModificarPersonaPedidoComponent},
   { path: 'gestion-backorders', component: GestionBackordersComponent },
