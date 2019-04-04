@@ -13,7 +13,7 @@ export class TableConfigSgo {
       lengthMenu: 'Mostrar _MENU_ registros',
       loadingRecords: 'Cargando...',
       processing: 'Procesando...',
-      search: 'Buscar',
+      search: "Buscar",
       zeroRecords: 'No se encontraron resultados',
       paginate: {
         first: 'Primero',

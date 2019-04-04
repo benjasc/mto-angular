@@ -103,9 +103,8 @@ import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarP
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 import { InputsDirective } from './directives/inputs.directive';
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
-import { HistorialDespachosComponent } from './modulos/sgo/components/historial-despachos/historial-despachos.component';
+import { HistorialDespachosComponent } from './modulos/sgo/components/consultaOC/historial-despachos/historial-despachos.component';
 import { HistorialDespachoService } from './modulos/sgo/services/historialDespacho.services';
-import { SucursalRetiroComponent } from './modulos/sgo/components/sucursal-retiro/sucursal-retiro.component';
 import { AnulacionReservasComponent } from './modulos/sgo/components/ventaPosPeru/anulacion-reservas/anulacion-reservas.component';
 import { DespachosPorEstadoComponent } from './modulos/sgo/components/despachos-por-estado/despachos-por-estado.component';
 import { DespachoPorEstadoService } from './modulos/sgo/services/despachoEstados.Services';
@@ -127,6 +126,12 @@ import { IngresoProgSectoresComponent } from './modulos/sgo/components/ingreso-p
 import {IngresoProgSectoresService } from './modulos/sgo/services/ingresoProgSectores.Services';
 import { PlanificacionRutasDespachoComponent } from './modulos/sgo/components/planificacion-rutas-despacho/planificacion-rutas-despacho.component';
 import {PlanificacionRutasDespachoService} from './modulos/sgo/services/planificacionRutasDespacho.Services';
+import { SistemaGestionOrdenesComponent } from './modulos/sgo/components/consultaOC/sistema-gestion-ordenes/sistema-gestion-ordenes.component';
+import { FlujoDespachoComponent } from './modulos/sgo/components/consultaOC/flujo-despacho/flujo-despacho.component';
+import { CambiarSucursalRetiroComponent } from './modulos/sgo/components/scgo/cambiar-sucursal-retiro/cambiar-sucursal-retiro.component';
+import { BuscarPedidosComponent } from './modulos/sgo/components/gestionRetirosCambios/buscar-pedidos/buscar-pedidos.component';
+import { ConfirmarTicketComponent } from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
+
 
 
 //import { InfoTransportCompanyService } from './modulos/gde/services/cargaDatosTransporte.service';
@@ -197,7 +202,6 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     InputsDirective,
     DespachoVentasCorporativasComponent,
     HistorialDespachosComponent,
-    SucursalRetiroComponent,
     AnulacionReservasComponent,
     DespachosPorEstadoComponent,
     MantencionDespachoComponent,
@@ -208,9 +212,15 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     MantencionRutasPlanAutoComponent,
     MantencionProgSectoresComponent,
     IngresoProgSectoresComponent,
-    PlanificacionRutasDespachoComponent
+    PlanificacionRutasDespachoComponent,
+    AnulacionReservasComponent,
+    SistemaGestionOrdenesComponent,
+    FlujoDespachoComponent,
+    CambiarSucursalRetiroComponent,
+    BuscarPedidosComponent,
+    ConfirmarTicketComponent
+    ],
 
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { Session } from 'protractor';
-import { TableConfigEmisionGDE } from '../../../gde/util/tableConfig.util';
+import { TableConfigSgo } from '../../../util/tableConfigSgo.util';
 import { DataTableDirective } from 'angular-datatables';
 import { Subject } from 'rxjs';
-import { HistorialDespachoService } from '../../services/historialDespacho.services';
-import { HistorialDespacho } from '../../model/historialDespacho.model';
+import { HistorialDespachoService } from '../../../services/historialDespacho.services';
+import { HistorialDespacho } from '../../../model/historialDespacho.model';
 
 
 
@@ -26,7 +26,7 @@ export class HistorialDespachosComponent implements OnInit, AfterViewInit, OnDes
 
   fecha:String;
   titulo:string;
-  constructor(public configTable:TableConfigEmisionGDE, 
+  constructor(public configTable:TableConfigSgo, 
               public historialDespachoService: HistorialDespachoService) {
     this.titulo = "Consulta de Cuadratura BigTicket - BackOffice";
     sessionStorage.setItem("titulo",this.titulo);
