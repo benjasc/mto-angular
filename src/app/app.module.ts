@@ -98,7 +98,7 @@ import { LpnbatchNumberComponent } from './modulos/sgo/components/lpnbatch-numbe
 import { LpnBatchNumberService } from './modulos/sgo/services/lpnBatchNumber.services.';
 import { TransferenciaSucursalComponent } from './modulos/sgo/components/transferencia-sucursal/transferencia-sucursal.component';
 import { TransferenciaSucursalService } from './modulos/sgo/services/transferenciaSucursal.services';
-import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
+import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/scgo/modificar-persona-pedido/modificar-persona-pedido.component';
 import { ModificarPersonaPedidoService } from './modulos/sgo/services/modificarPersonaPedido.service';
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 import { InputsDirective } from './directives/inputs.directive';
@@ -133,6 +133,10 @@ import { BuscarPedidosComponent } from './modulos/sgo/components/gestionRetirosC
 import { ConfirmarTicketComponent } from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
 import { ActaRetiroComponent } from './modulos/sgo/components/gestionRetirosCambios/acta-retiro/acta-retiro.component';
 import { CrudActaRetiroComponent } from './modulos/sgo/components/gestionRetirosCambios/crud-acta-retiro/crud-acta-retiro.component';
+import { ReintentosDespachoComponent } from './modulos/sgo/components/reintentosDespacho/reintentos-despacho/reintentos-despacho.component';
+import { EditarFlujoDespachoComponent } from './modulos/sgo/components/scgo/editar-flujo-despacho/editar-flujo-despacho.component';
+import { EditarFlujoDespacho2Component } from './modulos/sgo/components/scgo/editar-flujo-despacho2/editar-flujo-despacho2.component';
+import { EditarDireccionDespachoComponent } from './modulos/sgo/components/scgo/editar-direccion-despacho/editar-direccion-despacho.component';
 
 
 
@@ -222,7 +226,11 @@ registerLocaleData(localeCl, 'es-CL', localeClExtra);
     BuscarPedidosComponent,
     ConfirmarTicketComponent,
     ActaRetiroComponent,
-    CrudActaRetiroComponent
+    CrudActaRetiroComponent,
+    ReintentosDespachoComponent,
+    EditarFlujoDespachoComponent,
+    EditarFlujoDespacho2Component,
+    EditarDireccionDespachoComponent
     ],
 
   imports: [

@@ -1,4 +1,4 @@
-<section class="container is-fluid ">
+<section class="container ">
     <div class="card ">
         <div class="card-header ">
             <div class="card-header-title">Mantenedor de Motivos</div>
@@ -8,12 +8,20 @@
 
                 <div class="columns  is-centered">
 
-                    <div class="column is-6">
+                    <div class="column is-12">
                         <div class="card">
                             <div class="card-content">
-                                <a class="button is-info is-small">+ Nuevo Motivo</a><input class="input" type="text" />
-
-                                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" style="padding-top: 10px;" class="row-border hover table" width="100%">
+                                <div class="field has-addons">
+                                    <div class="control">
+                                        <input class="input is-small" type="text" placeholder="Nuevo Motivo">
+                                    </div>
+                                    <div class="control">
+                                        <a class="button is-info is-small">
+                                                Agregar
+                                              </a>
+                                    </div>
+                                </div>
+                                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table" width="100%">
                                     <thead>
                                         <tr>
                                             <th>Motivos</th>
@@ -33,11 +41,10 @@
                                 </table>
                             </div>
                         </div>
+                        <br>
+                        <a class="button ">Cancelar</a>
                     </div>
                 </div>
-
-                <br>
-                <a class="button ">Cancelar</a>
             </div>
 
         </div>

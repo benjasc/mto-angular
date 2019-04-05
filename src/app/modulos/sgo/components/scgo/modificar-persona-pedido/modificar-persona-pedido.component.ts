@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModificarPersonaPedidoService } from '../../services/modificarPersonaPedido.service';
-import { ModificarPersonaPedidoModel } from '../../model/modificarPersonaPedidoModel.model';
+import { ModificarPersonaPedidoService } from '../../../services/modificarPersonaPedido.service';
+import { ModificarPersonaPedidoModel } from '../../../model/modificarPersonaPedidoModel.model';
 
 
 

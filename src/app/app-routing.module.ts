@@ -34,7 +34,7 @@ import { GestionBackordersComponent } from './modulos/sgo/components/gestion-bac
 import {DespachoNumeroCartonComponent} from './modulos/sgo/components/despacho-numero-carton/despacho-numero-carton.component';
 import {LpnbatchNumberComponent} from './modulos/sgo/components/lpnbatch-number/lpnbatch-number.component';
 import { TransferenciaSucursalComponent } from './modulos/sgo/components/transferencia-sucursal/transferencia-sucursal.component';
-import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/modificar-persona-pedido/modificar-persona-pedido.component';
+import { ModificarPersonaPedidoComponent } from './modulos/sgo/components/scgo/modificar-persona-pedido/modificar-persona-pedido.component';
 import { IngresoReservasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/ingreso-reservas-corporativas/ingreso-reservas-corporativas.component';
 import { DespachoVentasCorporativasComponent } from './modulos/sgo/components/ventaPosPeru/despacho-ventas-corporativas/despacho-ventas-corporativas.component';
 import { HistorialDespachosComponent } from './modulos/sgo/components/consultaOC/historial-despachos/historial-despachos.component';
@@ -56,17 +56,29 @@ import {  BuscarPedidosComponent} from './modulos/sgo/components/gestionRetirosC
 import {  ConfirmarTicketComponent} from './modulos/sgo/components/gestionRetirosCambios/confirmar-ticket/confirmar-ticket.component';
 import {  ActaRetiroComponent} from './modulos/sgo/components/gestionRetirosCambios/acta-retiro/acta-retiro.component';
 import {  CrudActaRetiroComponent} from './modulos/sgo/components/gestionRetirosCambios/crud-acta-retiro/crud-acta-retiro.component';
+import {  ReintentosDespachoComponent} from './modulos/sgo/components/reintentosDespacho/reintentos-despacho/reintentos-despacho.component';
+import {  EditarFlujoDespachoComponent} from './modulos/sgo/components/scgo/editar-flujo-despacho/editar-flujo-despacho.component';
+import {  EditarDireccionDespachoComponent} from './modulos/sgo/components/scgo/editar-direccion-despacho/editar-direccion-despacho.component';
+
+
+
 
 
 
 const routes: Routes = [
+
+   /*Módulo de reintentos de Despacho*/
+   { path: 'reintentos-despacho', component: ReintentosDespachoComponent},
     /*Módulo de gestion de retiros y cambios*/
    { path: 'buscar-pedidos', component: BuscarPedidosComponent},
    { path: 'confirmar-ticket', component: ConfirmarTicketComponent},
    { path: 'acta-retiro', component: ActaRetiroComponent},
    { path: 'crud-acta-retiro', component: CrudActaRetiroComponent},
     /*Módulo de servicio al cliente y gestión de la orden*/
+   { path: 'editar-flujo-despacho', component: EditarFlujoDespachoComponent},
   { path: 'cambiar-sucursal-retiro', component: CambiarSucursalRetiroComponent},
+  { path: 'modificar-persona-pedido', component: ModificarPersonaPedidoComponent},
+  { path: 'editar-direccion-despacho', component: EditarDireccionDespachoComponent},
   /* Modulo Sistema de gestion de Ordenes*/
   { path: 'sistema-gestion-ordenes', component: SistemaGestionOrdenesComponent},
   { path: 'flujo-despacho', component: FlujoDespachoComponent},
@@ -87,7 +99,6 @@ const routes: Routes = [
   { path: 'mantencionDespacho', component: MantencionDespachoComponent},
   { path: 'despachoPorEstado', component: DespachosPorEstadoComponent},
   { path: 'historialDespacho', component: HistorialDespachosComponent},
-  { path: 'modificar-persona-pedido', component: ModificarPersonaPedidoComponent},
   { path: 'gestion-backorders', component: GestionBackordersComponent },
   { path: 'administracion-usuarios', component: AdministracionUsuariosComponent },
   { path: 'transferenciaSucursal' , component: TransferenciaSucursalComponent},
